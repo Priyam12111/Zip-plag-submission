@@ -1,4 +1,4 @@
-# Project Title
+# Zip-Plag-Submission
 
 A utility to check if a document's contents are plagiarised.
 
