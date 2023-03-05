@@ -19,25 +19,6 @@ Please note the following warnings:
 1. Do not reload the page until you receive the download URL.
 2. Only upload one zip file at a time.
 
-## Project Structure
-
-├── README.md
-├── manage.py
-├── requirements.txt
-├── plagzip
-│ ├── init.py
-│ ├── settings.py
-│ ├── urls.py
-│ └── wsgi.py
-└── Home
-├── init.py
-├── admin.py
-├── apps.py
-├── models.py
-├── tests.py
-├── urls.py
-└── views.py
-
 ## License
 
 This project is licensed under the MIT License.
