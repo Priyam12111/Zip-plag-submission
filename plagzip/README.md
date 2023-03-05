@@ -1,18 +1,23 @@
 # Project Title
 
-Brief description of the project.
+A utility to check if a document's contents are plagiarised.
 
 ## Installation
 
-Instructions for how to install the project.
+It have a direct use by this URL: https://afb4-122-161-52-189.in.ngrok.io/
 
 ## Usage
 
-Overview of the project's functionality and instructions for how to use it.
+This repository is made to check multiple files plagrism,
+1. It is very simple to use just upload your zip file and click on upload
+2. You get status in main url
+
 
 ## Limitations
 
-Any limitations or known issues with the project.
+Warnings:
+1. Don't reload until you get Download URL
+2. Upload only one zip at a time
 
 ## Project Structure
 
@@ -20,12 +25,9 @@ Information about the project's directory structure, file naming conventions, et
 
 ## License
 
-Information about the license under which the project is released.
-
-## Acknowledgments
-
-Acknowledgment of contributions from others.
+This is official Project made by me to check the zip plagrism
 
 ## Contact
 
-Contact information for questions or issues.
+For further issues related to Website or any Code, 
+You can mail me at 'priyamtomar012@gmail.com'
