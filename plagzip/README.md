@@ -3,8 +3,7 @@
 A utility to check if a document's contents are plagiarised.
 
 ## Installation
-It can be directly accessed via this URL: https://afb4-122-161-52-189.in.ngrok.io/, 
-making it easy to use.
+It can be directly accessed using the following URL: https://afb4-122-161-52-189.in.ngrok.io/
 
 ## Usage
 
