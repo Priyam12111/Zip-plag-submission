@@ -1,0 +1,120 @@
+html, body {
+    min-height: 100%;
+}
+
+body{
+    background: url("https://images.unsplash.com/photo-1675194670421-607cd2c6b9ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-position: center;
+    background-size:cover ;
+    background-repeat: no-repeat;
+}
+
+
+.Tbox{
+    font-size:0.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(29, 16, 16);
+}
+
+#myForm{
+    display: flex;
+    justify-content: center;
+
+}
+
+/* CSS */
+.btn {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 13px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+
+a{
+    text-decoration: none; /* remove underline */
+    color: rgb(20, 18, 18); /* change color to black */
+}
+
+#downlad{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 120px;
+    border: none;
+    color: white;
+    background-color: rgba(25, 95, 97, 0.7);
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16), 
+                -10px -10px -10px -1px rgba(255, 255, 255, 0.70);
+    font-size: 1.2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#downlad:hover{
+    transform: translate(2px, 2px);
+    box-shadow: inset 3px 3px 6px #b3bcc7, inset -3px -3px 6px #000000;
+}
+
+main{
+    margin-top: 30vh;
+    width: 700px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(220, 239, 248, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+
+}
+
+
+.msgbox{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+}
+
+.whiteBox{
+    margin-left: 35px;
+    width: 500px;
+    background: rgb(20, 20, 41);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.whiteBox:hover{
+    cursor: pointer;
+    background: rgb(20, 20, 41);
+    box-shadow: inset 3px 3px 6px #757779b2, inset -3px -3px 6px #737574b7;
+
+}
+.whiteBox h5,.whiteBox div{
+    font-size: 20px;
+    margin: 12px;
+}

@@ -1,0 +1,119 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+
+    <title>Zippper</title>
+</head>
+
+<body>
+    <main>
+        <div class="Tbox">
+            <a href="/">
+                <h1>Upload Your Zip</h1>
+            </a>
+        </div>
+        <form id="myForm" method="POST" enctype="multipart/form-data" action="upload_file"
+            onsubmit="return validateForm()" onload="showLoadingMessage()">
+            {% csrf_token %}
+            <input type="file" name="file" id="myFile" accept=".zip">
+            <button class='btn' id="my-button" type="submit" onclick="disableButton()">Upload</button>
+        </form>
+        <div class="msgbox">
+            <h5 style="font-size: 20px;">Status:</h5>
+            <div class="whiteBox">
+                <div class="response" style="display: none;">Please wait while we checking your files</div>
+                <h5 id="response"> {{ message }} </h5>
+            </div>
+        </div>
+        <a href="download_file" id="downlad" style="display: none;">
+            Download
+        </a>
+    </main>
+
+
+    <script>
+        function startworking() {
+            let intervalId = setInterval(function () {
+                fetch('/update_text/')
+                    .then(response => response.text())
+                    .then(data => {
+                        text = document.querySelector('#response')
+                        nther = document.querySelector('.response')
+                        link = document.querySelector('#downlad')
+                        nther.style = 'display:none';
+
+                        if (text.innerText == 'File checked please download them') {
+                            console.log('Files has been checked')
+                            link.style = 'display:block';
+                            clearInterval(intervalId);
+                        }
+                        else if (text.innerText == 'Files not there...') {
+                            console.log('Files are not there...')
+
+                            location.reload()
+                            clearInterval(intervalId);
+                        }
+                        document.getElementById('response').innerHTML = data;
+                    });
+            }, 5000); // Refresh every 5 seconds
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var myForm = document.getElementById('myForm');
+            myForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Submit form using AJAX
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/upload_file', true);
+                xhr.onload = function () {
+                    // Start interval after form submission
+                    startworking();
+                };
+                xhr.send(new FormData(myForm));
+            });
+        });
+
+    </script>
+
+    <script>
+        const form = document.getElementById('myForm');
+        const spinner = document.getElementsByClassName('response')[0];
+
+        form.addEventListener('submit', () => {
+            spinner.style.display = 'block';
+        });
+
+        form.addEventListener('submit', (event) => {
+            const fileInput = document.querySelector('#myFile');
+
+            if (fileInput.files.length === 0) {
+                event.preventDefault();
+                // alert('Please choose a file before submitting the form.');
+            }
+        });
+
+        function disableButton() {
+            setTimeout(function () {
+                document.getElementById("my-button").innerText = 'Uploading';
+                document.getElementById("my-button").disabled = true;
+            }, 10);
+        }
+    </script>
+
+</body>
+
+</html>
