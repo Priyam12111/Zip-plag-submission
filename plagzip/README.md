@@ -1,6 +1,6 @@
 # Zip-Plag-Submission
 
-A utility to check if a document's contents are plagiarised.
+This tool can be used to detect plagiarism in the contents of a document.
 
 ## Installation
 It can be directly accessed using the following URL: https://afb4-122-161-52-189.in.ngrok.io/
@@ -8,25 +8,46 @@ It can be directly accessed using the following URL: https://afb4-122-161-52-189
 ## Usage
 
 This repository is made to check multiple files plagrism,
-1. It is very simple to use just upload your zip file and click on upload
-2. You get status in main url
+1. Using this tool is very simple; just upload your zip file and click on the 'upload' button.
+2. The main URL provides the current status.
 
 
 ## Limitations
 
-Warnings:
-1. Don't reload until you get Download URL
-2. Upload only one zip at a time
+Please note the following warnings:
+
+1. Do not reload the page until you receive the download URL.
+2. Only upload one zip file at a time.
 
 ## Project Structure
 
-Information about the project's directory structure, file naming conventions, etc.
+├── README.md
+├── manage.py
+├── requirements.txt
+├── plagzip
+│ ├── init.py
+│ ├── settings.py
+│ ├── urls.py
+│ └── wsgi.py
+└── Home
+├── init.py
+├── admin.py
+├── apps.py
+├── models.py
+├── tests.py
+├── urls.py
+└── views.py
 
 ## License
 
-This is official Project made by me to check the zip plagrism
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+- Plagiarism checker API provider
+- Django community
+- Python community
 
 ## Contact
 
-For further issues related to Website or any Code, 
-You can mail me at 'priyamtomar012@gmail.com'
+If you have any questions or issues, please contact me at 'priyamtomar012@gmail.com'
