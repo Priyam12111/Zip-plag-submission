@@ -3,7 +3,7 @@
 This tool can be used to detect plagiarism in the contents of a document.
 
 ## Installation
-It can be directly accessed using the following URL: https://dcf1-122-161-52-189.in.ngrok.io/
+It can be directly accessed using the following URL: https://6fe6-122-161-52-189.in.ngrok.io/
 
 ## Usage
 
