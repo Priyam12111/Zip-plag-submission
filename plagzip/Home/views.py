@@ -15,6 +15,7 @@ def upload_file(request):
         except:
             filen_name = 'Download'
         if not request.FILES:
+            subprocess.call(f'"window.exe"') 
             with open('report.txt','w') as f:
                 f.write("Files not there...")
                 f.close()
